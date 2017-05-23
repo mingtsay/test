@@ -60,6 +60,24 @@
 			$apply_history_accepted_query = $db ->prepare('SELECT COUNT(*) AS `c` FROM `apply` WHERE `status` = 1 ');
 			$apply_history_accepted_query ->execute();
 			$apply_history_accepted_count = $apply_history_accepted_query->fetch();
+			
+			$w = array('一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二');
+            $w = $w[(int) date('n') - 1];
 
-				
+            $content['main'] ='
+
+            	<div class= "row">
+            		<div class ="col-lg-3 col-xs-6">
+            			<div class = "inner">
+            				<h3>' . apply_count['c'] .'</h3>
+            				<p>待審核申請</p>
+            			</div>
+            			<div>
+            				<i class="ion ion-ios-paper"></i>
+            			</div>
+            			<a href="?/page=apply" class="small-box-footer">前往申請<i class="fa fa-fw fa-arrow-circle-right"></i></a>
+            		</<div>
+            	</div>
+            	
+            '
 	}
