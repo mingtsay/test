@@ -1,0 +1,8 @@
+.rotate-1 {
+    transform: rotate(180deg);
+    transition: transform 550ms ease;
+}
+.rotate-2 {
+    transform: rotate(360deg);
+    transition: transform 550ms ease;
+}
