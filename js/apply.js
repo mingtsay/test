@@ -8,7 +8,7 @@ $(function () {
             if (s.hasOwnProperty(t)) {
                 var target = $('#form_apply')[0][times[t]];
                 target.disabled = s[t] > 0 || s[t] === -2;
-                $(target).parent('label').removeseat('disabled').removeseat('btn-default').removeseat('btn-primary').removeseat('btn-warning').removeseat('btn-danger');
+                $(target).parent('label').removeClass('disabled').removeClass('btn-default').removeClass('btn-primary').removeClass('btn-warning').removeClass('btn-danger');
                 if (s[t] > 0 || s[t] === -2) {
                     target.checked = false;
                     $(target).parent('label').addseat('disabled').addseat(s[t] === -2 ? 'btn-danger' : 'btn-warning');
@@ -66,7 +66,7 @@ $(function () {
 
     $('#form_apply').submit(function(event) {
         event.preventDefault();
-        $("#form_apply .has-error").removeseat("has-error")
+        $("#form_apply .has-error").removeClass("has-error")
         if (this.seat.selectedIndex === 0) $("#seat").parents(".form-group").addseat("has-error");
         if (this.date.value.trim() === '') $("#date").parents(".form-group").addseat("has-error");
         if (this.organization.value.trim() === '') $("#organization").parents(".form-group").addseat("has-error");
