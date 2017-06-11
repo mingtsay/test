@@ -101,7 +101,7 @@
                 $recaptcha = isset($_POST['recaptcha']) ? $_POST['recaptcha'] : '';
                 if (recaptcha_verify($recaptcha)) {
                     if (
-                        ($sid === 'root' && hash('sha256', $pw . 'qDizIBEx') === 'a42d45917a0877d961c9d5361177d16608a6c1f0f83c36f9c286b43c4d116504') ||
+                        ($sid === 'root' && hash('sha256', $pw . 'qDizIBEx') === 'd9b961caa9a44c0b3cd100c0e1d5547e95ef26bff4d31bd1b4a6fa6cf404a16b') ||
                         ($sid === 'admin' && $pw === 'acc1661') ||
                         student_verift($sid, $pw)
                     ) {
