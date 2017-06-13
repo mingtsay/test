@@ -32,7 +32,7 @@
 
     function database_get(){
     	if(!isset($GLOBALS['__PDO_DB__'])){
-    		$GLOBALS['__PDO_DB__'] = new PDO('mysql:host = localhost; dbname = seat-fgusg','root','');
+    		$GLOBALS['__PDO_DB__'] = new PDO('mysql:host = localhost; dbname = seat-fgusg','adminfiseAcE','TKaN4PCDwDP4');
     		$GLOBALS['__PDO_DB__'] ->exec('SET NAMES UTF8');
     	}
     	return $$GLOBALS['__PDO_DB__'] ;
