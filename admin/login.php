@@ -1,7 +1,5 @@
 <?php
-	include_once('include.inc.php');
-
-
+    include_once('include.inc.php');
     function recaptcha_verify($recaptcha_response) {
         return json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, stream_context_create(array('http' => array(
             'method'  => 'POST',
@@ -12,7 +10,6 @@
                 'remoteip' => $_SERVER['REMOTE_ADDR'],
         )))))), true)['success'];
     }
-
     if ($_SESSION['admin_login']) redirect('');
     $okay = true;
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,7 +18,7 @@
         $recaptcha = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
         $okay = false;
         if (recaptcha_verify($recaptcha)) {
-            if ($username === 'root' && hash('sha256', $password . 'qDizIBEx') === 'd9b961caa9a44c0b3cd100c0e1d5547e95ef26bff4d31bd1b4a6fa6cf404a16b') {
+            if ($username === 'root' && hash('sha256', $password . 'qDizIBEx') === 'a42d45917a0877d961c9d5361177d16608a6c1f0f83c36f9c286b43c4d116504') {
                 $okay = true;
                 $_SESSION['admin_login'] = true;
                 $_SESSION['admin_root'] = true;
@@ -37,7 +34,7 @@
         }
     }
     $msg_class = $okay ? '' : ' login-failure';
-    $msg = $okay ? '佛光大學座位預約系統後台' : (mt_rand(0, 9) ? '登入失敗，請檢查您輸入的資料是否正確' : 'oops 不給你用');
+    $msg = $okay ? '佛光大學座位預約系統後台' : (mt_rand(0, 9) ? '登入失敗，請檢查您輸入的資料是否正確' : '哼～人家才不讓你登入哩030');
     $html = '<!DOCTYPE html>
 <html lang="zh-tw">
     <head>
@@ -76,7 +73,7 @@
     <body class="hold-transition login-page">
         <div class="login-box' . $msg_class . '">
             <div class="login-logo">
-                <a href="./"><b>FGU</b>SG</a>
+                <a href="./"><b>NTUST</b>SG</a>
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">' . $msg . '</p>
@@ -101,7 +98,7 @@
                             <button type="submit" class="btn btn-primary btn-block btn-flat">登入</button>
                         </div><!-- /.col -->
                     </div>
-                    <div class="g-recaptcha text-center" data-sitekey="6Le0QRYTAAAAADCcXwkg4u4dVH_uPbSUeJDutCB6">
+                    <div class="g-recaptcha text-center" data-sitekey="6Lf5jCUUAAAAAFJjQZ_6qjkBaYmOFCw0Jn9ZqdAY">
                     </div><!-- /.g-recaptcha -->
                 </form>
                 <a href="/">&laquo; 返回 佛光大學座位預約系統</a>

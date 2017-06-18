@@ -1,6 +1,6 @@
-<!--#include file="meta.inc.html"-->
+<?php include("meta.inc.html") ;?>
         <title>借用須知 - 佛光大學座位預約系統</title>
-<!--#include file="header.inc.html"-->
+<?php include("header.inc.html") ;?>
                 <section class="content-header">
                     <h1>借用須知</h1>
                     <ol class="breadcrumb">
@@ -21,4 +21,4 @@
                     </div>
                 </section>
                 <script src="/js/notice.js"></script>
-<!--#include file="footer.inc.html"-->
+<?php include("footer.inc.html"); ?>

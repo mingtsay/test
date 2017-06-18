@@ -1,7 +1,6 @@
-<!-- #include file="meta.inc.html"-->
+<?php include("meta.inc.html");?>
 	<title>申請借用 - 佛光大學座位預約系統</title>
-<!-- #include file="header.inc.html"-->
-		
+<?php include("header.inc.html");?>
 		<section class ="content-header">
 			<h1>申請借用</h1>
 			<ol class="breadcrumb">
@@ -104,4 +103,4 @@
         <script src="/datepicker/js/bootstrap-datepicker.min.js"></script>
         <script src="/datepicker/locales/bootstrap-datepicker.zh-TW.min.js"></script>
         <script src="/js/apply.js?v=a409a4e"></script>
-<!--#include file = "footer.inc.html" -->
+<?php include("footer.inc.html");?>

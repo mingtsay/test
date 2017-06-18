@@ -1,11 +1,11 @@
-<!--#include file="meta.inc.html"-->
-        <title>登入 - 佛光大學座位預約系統借用系統</title>
-<!--#include file="header.inc.html"-->
+<?php include("meta.inc.html");?>
+        <title>登入 - 佛光大學席位預約系統</title>
+<?php include("header.inc.html");?>
                 <section class="content-header">
                     <h1>登入</h1>
                     <ol class="breadcrumb">
-                        <li><a href="/zh-tw">佛光大學座位預約系統</a></li>
-                        <li class="active"><a href="login.html">登入</a></li>
+                        <li><a href="#">佛光大學席位預約系統</a></li>
+                        <li class="active"><a href="login.php">登入</a></li>
                     </ol>
                 </section>
                 <section class="content">
@@ -30,7 +30,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <div id="recaptcha" class="g-recaptcha form-control" data-sitekey="6Le0QRYTAAAAADCcXwkg4u4dVH_uPbSUeJDutCB6"></div>
+                                            <div id="recaptcha" class="g-recaptcha form-control" data-sitekey="6Lf5jCUUAAAAAFJjQZ_6qjkBaYmOFCw0Jn9ZqdAY"></div>
                                         </div>
                                     </div>
                                     <div class="box-footer">
@@ -42,4 +42,4 @@
                     </div>
                 </section>
                 <script src="/js/login.js"></script>
-<!--#include file="footer.inc.html"-->
+<?php include("footer.inc.html");?>

@@ -24,7 +24,7 @@
             'method'  => 'POST',
             'header'  => 'Content-type: application/x-www-form-urlencoded',
             'content' => http_build_query(array(
-                'secret'   => '6Le0QRYTAAAAACiX_DKhiDRSLPl1JXVPfMZB-hX7',
+                'secret'   => '6Lf5jCUUAAAAALEvCuLxboIHNRWVhP2A89Scgpxi',
                 'response' => $recaptcha_response,
                 'remoteip' => $_SERVER['REMOTE_ADDR'],
         )))))), true)['success'];
@@ -32,7 +32,7 @@
 
     function database_get(){
     	if(!isset($GLOBALS['__PDO_DB__'])){
-    		$GLOBALS['__PDO_DB__'] = new PDO('mysql:host = localhost; dbname = seat-fgusg','adminfiseAcE','TKaN4PCDwDP4');
+    		$GLOBALS['__PDO_DB__'] = new PDO('mysql:host = 127.4.153.2; dbname = seat-fgusg','adminfiseAcE','TKaN4PCDwDP4');
     		$GLOBALS['__PDO_DB__'] ->exec('SET NAMES UTF8');
     	}
     	return $$GLOBALS['__PDO_DB__'] ;
@@ -101,7 +101,7 @@
                 $recaptcha = isset($_POST['recaptcha']) ? $_POST['recaptcha'] : '';
                 if (recaptcha_verify($recaptcha)) {
                     if (
-                        ($sid === 'root' && hash('sha256', $pw . 'qDizIBEx') === 'd9b961caa9a44c0b3cd100c0e1d5547e95ef26bff4d31bd1b4a6fa6cf404a16b') ||
+                        ($sid === 'root' && hash('sha256', $pw . 'qDizIBEx') === 'a42d45917a0877d961c9d5361177d16608a6c1f0f83c36f9c286b43c4d116504') ||
                         ($sid === 'admin' && $pw === 'acc1661') ||
                         student_verift($sid, $pw)
                     ) {
